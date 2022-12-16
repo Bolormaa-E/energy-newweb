@@ -88,18 +88,28 @@ export default function Index(props) {
               />
             }
           </div>
+          <img
+            src={require("../../assets/image/bann.png")}
+            alt="bottom image"
+            className="bottomImage"
+          />
         </div>
       </div>
       <Footer
-        style={{ backgroundColor: "#eeeeee", paddingLeft: 300, fontSize: 11 }}
+        style={{
+          paddingLeft: 300,
+          fontSize: 11,
+          backgroundColor: "#fff",
+          overflow: "hidden",
+        }}
       >
         <div
           className="footerContainer"
           style={{
             display: "flex",
             justifyContent: "space-between",
-            paddingLeft: 100,
-            paddingRight: 100,
+            position: "relative",
+            width: "100%",
           }}
         >
           <div>

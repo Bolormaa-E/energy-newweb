@@ -12,7 +12,6 @@ export default function Index() {
   return (
     // <Layout>
     <>
-   
       <div className="cards">
         <div className="card" style={{ position: "fixed" }}>
           <Sider
@@ -46,9 +45,7 @@ export default function Index() {
               </ul>
             </div>
           </Header>
-          <Content
-            className="mainContainer"
-          >
+          <Content className="mainContainer">
             <div className="contentContainer">
               <div className="searchContainer">
                 <p>Эрчим хүчний салбарын нэгдсэн мэдээлэл</p>
@@ -69,16 +66,36 @@ export default function Index() {
               /> */}
               </div>
             </div>
-          </Content >
+          </Content>
 
           <Posts />
+          <img
+            src={require("../../assets/image/bann.png")}
+            alt="bottom image"
+            className="bottomImage"
+          />
         </div>
       </div>
 
-      <Footer  style={{ paddingLeft: 300, fontSize: 11}}>
+      <Footer
+        style={{
+          paddingLeft: 300,
+          fontSize: 11,
+          backgroundColor: "#fff",
+          overflow: "hidden",
+        }}
+      >
         <>
-        <div className="footerContainer" style={{display: "flex", justifyContent: "space-between", paddingLeft:100, paddingRight:100}}>
-          <div >
+          <div
+            className="footerContainer"
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              position: "relative",
+              width: "100%",
+            }}
+          >
+            <div>
               <ul className="footerListContainer">
                 <li>
                   <a href="https://ndc.able.mn/">И-Оффис</a>
@@ -88,36 +105,35 @@ export default function Index() {
                 </li>
               </ul>
             </div>
-           <div>
-            <ul className="footerListContainer">
-              <li>
-                <a href="http://sbm.energy.mn/login/auth?logout">
-                  Тэг үлдэгдэлтэй данс
-                </a>
-              </li>
-              <li>
-                <a href="https://disnews.energy.mn/login.php">
-                  Диспетчерийн хоногийн мэдээ
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <ul className="footerListContainer">
-              <li>
-                <a href="https://disnews.energy.mn/disnews/login.php">
-                  Технологийн зөрчил
-                </a>
-              </li>
-              <li>
-                <a href="http://rpa.energy.mn/">Зөвлөл</a>
-              </li>
-            </ul>
-          </div>
+            <div>
+              <ul className="footerListContainer">
+                <li>
+                  <a href="http://sbm.energy.mn/login/auth?logout">
+                    Тэг үлдэгдэлтэй данс
+                  </a>
+                </li>
+                <li>
+                  <a href="https://disnews.energy.mn/login.php">
+                    Диспетчерийн хоногийн мэдээ
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul className="footerListContainer">
+                <li>
+                  <a href="https://disnews.energy.mn/disnews/login.php">
+                    Технологийн зөрчил
+                  </a>
+                </li>
+                <li>
+                  <a href="http://rpa.energy.mn/">Зөвлөл</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </>
       </Footer>
-      
 
       {/* </Layout> */}
     </>
