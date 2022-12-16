@@ -80,6 +80,7 @@ export default function Index() {
       <Footer
         style={{
           paddingLeft: 300,
+          paddingRight: 300,
           fontSize: 11,
           backgroundColor: "#fff",
           overflow: "hidden",
