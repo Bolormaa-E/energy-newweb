@@ -78,18 +78,28 @@ export default function Index(props) {
               </div>
             </div>
           </Content>
-          <div className="article-read-container" style={{ padding: 30 }}>
-            <h2>{data?.title?.rendered}</h2>
-            <p>{moment(data?.date).format("yyyy-MM-DD")}</p>
-            <hr />
-            {
-              <div
-                dangerouslySetInnerHTML={{ __html: data?.content?.rendered }}
-              />
-            }
+          <div className="article-cards">
+            <div
+              className="article-container"
+              style={{
+                padding: 30,
+                margin: 50,
+              }}
+            >
+              <h2>{data?.title?.rendered}</h2>
+              <p style={{ display: "flex", justifyContent: "flex-end" }}>
+                {moment(data?.date).format("yyyy-MM-DD")}
+              </p>
+              <hr />
+              {
+                <div
+                  dangerouslySetInnerHTML={{ __html: data?.content?.rendered }}
+                />
+              }
+            </div>
           </div>
           <img
-            src={require("../../assets/image/bann.png")}
+            src={require("./../../assets/image/bann.png")}
             alt="bottom image"
             className="bottomImage"
           />
@@ -98,9 +108,8 @@ export default function Index(props) {
       <Footer
         style={{
           paddingLeft: 300,
-          fontSize: 11,
+          fontSize: 12,
           backgroundColor: "#fff",
-          overflow: "hidden",
         }}
       >
         <div
@@ -108,8 +117,6 @@ export default function Index(props) {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            position: "relative",
-            width: "100%",
           }}
         >
           <div>
