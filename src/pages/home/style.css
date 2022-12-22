@@ -116,8 +116,8 @@
 }
 .bottomImage {
   width: 100%;
-  margin-bottom: -100px;
-  opacity: 0.8;
+  margin-bottom: -350px;
+  filter: opacity(0.8);
 }
 
 /* SVG*/

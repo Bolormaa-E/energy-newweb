@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Layout } from "antd";
 import { AiOutlineSearch } from "react-icons/ai";
 import "./style.css";
@@ -9,6 +9,14 @@ import { HeroSVG } from "../../icon/svg";
 const { Header, Footer, Sider, Content } = Layout;
 
 export default function Index() {
+  const [search, setSearch] = useState("");
+
+  const getSearch = () => {
+    if (!search) return;
+
+    console.log(`Searching "${search}" key...`);
+    window.location.replace("/?keyword=" + search);
+  };
   return (
     // <Layout>
     <>
@@ -50,8 +58,15 @@ export default function Index() {
               <div className="searchContainer">
                 <p>Эрчим хүчний салбарын нэгдсэн мэдээлэл</p>
                 <div style={{ position: "relative", paddingLeft: "20%" }}>
-                  <input type="text" placeholder="Search" />
-                  <button>
+                  <input
+                    type="text"
+                    placeholder="Хайх..."
+                    onChange={(e) => setSearch(e.target.value)}
+                    onKeyPress={(e) => {
+                      if (e.charCode === 13) getSearch();
+                    }}
+                  />
+                  <button onClick={getSearch}>
                     <AiOutlineSearch className="searchIcon" />
                   </button>
                 </div>

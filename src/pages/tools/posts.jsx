@@ -9,8 +9,12 @@ export default function Posts() {
 
   useEffect(() => {
     async function fetchPosts() {
+      let keyword = window.location.search.split("keyword=")[1];
+      console.log(keyword);
       const rawPosts = await fetch(
-        "https://www.energy.mn/web/?rest_route=/wp/v2/posts&per_page=8"
+        keyword
+          ? `https://www.energy.mn/web/?rest_route=/wp/v2/posts&search=${keyword}&per_page=6`
+          : "https://www.energy.mn/web/?rest_route=/wp/v2/posts&per_page=6"
       );
       const posts = await rawPosts.json();
 
