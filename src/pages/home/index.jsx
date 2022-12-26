@@ -17,6 +17,14 @@ export default function Index() {
     console.log(`Searching "${search}" key...`);
     window.location.replace("/?keyword=" + search);
   };
+
+  const top = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     // <Layout>
     <>
@@ -39,15 +47,7 @@ export default function Index() {
                 <li>
                   <p>Эхлэл</p>
                 </li>
-                <li
-                  onClick={() => {
-                    window.scrollTo({
-                      top: document.body.scrollHeight,
-                      left: 0,
-                      behavior: "smooth",
-                    });
-                  }}
-                >
+                <li onClick={top}>
                   <p>Программууд</p>
                 </li>
               </ul>
