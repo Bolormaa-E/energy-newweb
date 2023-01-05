@@ -9,16 +9,14 @@ import NotFound from "./pages/notFound";
 
 export default function App() {
   return (
-    <BrowserRouter forceRefresh={true}>
+    <BrowserRouter>
       <Switch>
         <RouteLink exact path="/" component={HomePage} />
         <RouteLink exact path="/post/read/id=:id" component={ReadPage} />
 
         {/* Not Found хуудас */}
         <RouteLink exact path="*" component={NotFound} />
-        <RouteLink path="/" 
-        />
-
+        <RouteLink path="/" />
       </Switch>
     </BrowserRouter>
   );

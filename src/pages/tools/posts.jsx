@@ -13,8 +13,8 @@ export default function Posts() {
       console.log(keyword);
       const rawPosts = await fetch(
         keyword
-          ? `https://www.energy.mn/web/?rest_route=/wp/v2/posts&search=${keyword}&per_page=6`
-          : "https://www.energy.mn/web/?rest_route=/wp/v2/posts&per_page=6"
+          ? `https://www.energy.mn/oldweb/?rest_route=/wp/v2/posts&search=${keyword}&per_page=6`
+          : "https://www.energy.mn/oldweb/?rest_route=/wp/v2/posts&per_page=8"
       );
       const posts = await rawPosts.json();
 

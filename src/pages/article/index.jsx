@@ -140,7 +140,7 @@ export default function Index(props) {
                 <a href="https://ndc.able.mn/">И-Оффис</a>
               </li>
               <li>
-                <a href="https://webmail.ndc.energy.mn/">Электрон шуудан</a>{" "}
+                <a href="https://email.energy.mn/">Электрон шуудан</a>{" "}
               </li>
             </ul>
           </div>
